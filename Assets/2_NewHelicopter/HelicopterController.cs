@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 namespace NewHelicopter
 {
@@ -70,6 +69,10 @@ namespace NewHelicopter
         private Vector2 hTilt = Vector2.zero;
         private float hTurn = 0f;
         public bool IsOnGround = true;
+        void Start()
+        {
+            EngineForce = 18;
+        }
 
         void FixedUpdate()
         {
