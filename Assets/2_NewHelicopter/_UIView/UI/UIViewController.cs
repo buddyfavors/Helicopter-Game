@@ -19,7 +19,6 @@ namespace NewHelicopter
         void Awake()
         {
             runtime = this;
-            //CanvasGroup.alpha = 0;
         }
 
         public void SetPlayer(Transform player)
@@ -58,7 +57,6 @@ namespace NewHelicopter
 
         public void RestartGame()
         {
-            // Application.LoadLevel("Main");
         }
     }
 }

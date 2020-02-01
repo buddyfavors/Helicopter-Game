@@ -38,7 +38,7 @@ namespace HelicopterECS
             }
         }
 
-        private void Processing(HelicopterModel Model)//, float dt)
+        private void Processing(HelicopterModel Model)
         {
 
             if (Input.UpMove > 0)

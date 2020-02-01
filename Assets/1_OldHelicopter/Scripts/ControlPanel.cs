@@ -63,11 +63,9 @@ public class ControlPanel : MonoBehaviour {
         if (Input.GetKey(MusicOffOn))
         {
            if (  MusicSound.volume == 1) return;
-/*            if (MusicSound.isPlaying)
-                MusicSound.Stop();
-            else*/
-                MusicSound.volume = 1;
-                MusicSound.Play();
+
+            MusicSound.volume = 1;
+            MusicSound.Play();
         }
       
 	}

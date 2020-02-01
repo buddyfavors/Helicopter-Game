@@ -41,20 +41,11 @@ namespace NewHelicopter
         [System.Obsolete]
         public void VisualizeDustGround(float distance, Vector3 point)
         {
-            //DustParticleSystem.gameObject.SetActive(distance < MaxDustDistance);
+            DustParticleSystem.transform.position = point;
+            var distanceFactor = Mathf.Clamp01(distance / MaxDustDistance);
 
-            //if (DustParticleSystem.gameObject.activeSelf)
-            //{
-                DustParticleSystem.transform.position = point;
-                var distanceFactor = Mathf.Clamp01(distance / MaxDustDistance);
-                
-                DustParticleSystem.startSpeed = 1-distanceFactor;
-                DustParticleSystem.startLifetime = (1-distanceFactor)*2;
-                // var c = color;
-                // c.a = Mathf.Lerp(c.a * engine, c.a * Sensitive, distanceFactor);
-                // DustParticleSystem.startColor = c;
-            //}
-
+            DustParticleSystem.startSpeed = 1 - distanceFactor;
+            DustParticleSystem.startLifetime = (1 - distanceFactor) * 2;
         }
     }
 }

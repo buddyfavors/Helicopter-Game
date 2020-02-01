@@ -14,9 +14,6 @@ namespace HelicopterECS
 
         void Start()
         {
-
-            //var player = Object.Instantiate(PlayerPrefab);
-
             var entityManager = World.Active.GetOrCreateManager<EntityManager>();
 
             var PlayerArchetype = entityManager.CreateArchetype(

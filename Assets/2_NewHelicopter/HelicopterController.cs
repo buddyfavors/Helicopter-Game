@@ -97,8 +97,6 @@ namespace NewHelicopter
                 Debug.DrawLine(transform.position, hit.point, Color.cyan);
                 distanceToGround = hit.distance;
                 pointToGround = hit.point;
-
-                //isOnGround = hit.distance < 2f;
             }
 
             var upForce = 1 - Mathf.Clamp(HelicopterModel.transform.position.y / EffectiveHeight, 0, 1);
@@ -188,10 +186,6 @@ namespace NewHelicopter
 
             if (UIViewController.runtime.EngineForceView != null)
                 UIViewController.runtime.EngineForceView.text = string.Format("Engine [ {0} ] ", (int)EngineForce);
-
-            // if (UIViewController.runtime.UpDragView != null)
-            //     UIGameController.runtime.UpDragView.text = string.Format("Up Force [ {0} ] f",
-            //         (int)CurrentHeightForce);
 
             if (UIViewController.runtime.HeigthView != null)
                 UIViewController.runtime.HeigthView.text = string.Format("Heigth  [ {0} ] m", (int)transform.position.y);
