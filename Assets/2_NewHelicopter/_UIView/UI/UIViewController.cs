@@ -8,10 +8,6 @@ namespace NewHelicopter
     {
         public GameObject PlayerUI;
 
-        [Header("FlightView")]
-        public Text UpDragView;
-        public Text HeigthUpView;
-        public Text HeigthView;
         public Text EngineForceView;
 
         public static UIViewController runtime;
@@ -40,9 +36,6 @@ namespace NewHelicopter
         private void ShowInfoPanel(bool isShow)
         {
             EngineForceView.gameObject.SetActive(!isShow);
-            /*  RestartButton.SetActive(!isShow);
-                 InfoButton.SetActive(!isShow);
-                    InfoPanel.SetActive(isShow);*/
         }
 
         public void ShowInfo()

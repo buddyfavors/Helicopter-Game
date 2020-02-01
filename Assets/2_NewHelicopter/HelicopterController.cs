@@ -186,15 +186,8 @@ namespace NewHelicopter
                 DustAirController.VisualizeDustGround(DistanceToGround, PointToGround);
             }
 
-            if (UIViewController.runtime.HeigthUpView != null)
-                UIViewController.runtime.HeigthUpView.text = string.Format("To Ground [ {0} ] m",
-                    (int)DistanceToGround);
-
             if (UIViewController.runtime.EngineForceView != null)
                 UIViewController.runtime.EngineForceView.text = string.Format("Engine [ {0} ] ", (int)EngineForce);
-
-            if (UIViewController.runtime.HeigthView != null)
-                UIViewController.runtime.HeigthView.text = string.Format("Heigth  [ {0} ] m", (int)transform.position.y);
         }
 
     }
