@@ -7,7 +7,6 @@ namespace NewHelicopter
     public class UIViewController : MonoBehaviour
     {
         public GameObject PlayerUI;
-        public GyroscopeViewController GyroscopeView;
 
         [Header("FlightView")]
         public Text UpDragView;
@@ -26,13 +25,11 @@ namespace NewHelicopter
         public void SetPlayer(Transform player)
         {
             PlayerUI.SetActive(true);
-            GyroscopeView.SetPlayer(player);
         }
 
       
         public void DeletePlayer(Transform player)
         {
-            GyroscopeView.DeletePlayer(player);
         }
 
         void Start()
