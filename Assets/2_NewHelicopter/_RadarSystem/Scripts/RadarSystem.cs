@@ -81,11 +81,11 @@ namespace SunCube.Radar
             };
             var radarTypeInfo = GetIconInfo(type);
 
-            enemyInfo.EnemyArrow.transform.parent = Root;
+            enemyInfo.EnemyArrow.transform.SetParent(Root, false);
             enemyInfo.EnemyArrow.localPosition = new Vector3(0, 0, 0);
             enemyInfo.EnemyArrow.GetComponent<Image>().sprite = radarTypeInfo.ArrowIcon;
 
-            enemyInfo.EnemyPoint.transform.parent = Root;
+            enemyInfo.EnemyPoint.transform.SetParent(Root, false);
             enemyInfo.EnemyPoint.localPosition = new Vector3(0, 0, 0);
             enemyInfo.EnemyPoint.GetComponent<Image>().sprite = radarTypeInfo.Icon;
 
