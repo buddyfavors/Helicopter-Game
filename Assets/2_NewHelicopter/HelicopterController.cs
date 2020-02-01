@@ -40,6 +40,9 @@ namespace NewHelicopter
             get { return _engineForce; }
             set
             {
+                if (value < 0 || value >= 50)
+                    return;
+
                 MainRotorController.RotarSpeed = value * 80;
                 SubRotorController.RotarSpeed = value * 40;
                 HelicopterSound.pitch = Mathf.Clamp(value / 40, 0, 1.2f);
